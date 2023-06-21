@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ServOn.com</title>
+
+    <!-- ============= Font-Awesome ============= -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <!-- ============ /Font-Awesome/ ============ -->
+
+    <!-- ============= JQuery ============= -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- ============ /JQuery/ ============ -->
+
+    <!-- ============= Custom ============= -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ============ /Custom/ ============ -->
+
+    <!-- ============= Next ============= -->
+    <!-- ============ /Next/ ============ -->
+
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="content">
+        <div class="brand">
+          <img src="images/logo.png" alt="logo">
+          <h1>ServOn</h1>
+        </div>
+        <div class="nav-bar-nav">
+          <i class="fa-solid fa-magnifying-glass" id="search-btn-1"></i>
+          <ul class="nav-ul">
+            <li class="nav-ul-li">
+              <a href="#" class="nav-ul-li-a">Home</a>
+            </li>
+            <li class="nav-ul-li">
+              <a href="#" class="nav-ul-li-a">Services</a>
+            </li>
+            <li class="nav-ul-li">
+              <a href="#" class="nav-ul-li-a">Products</a>
+            </li>
+            <li class="nav-ul-li">
+              <a href="#" class="nav-ul-li-a">Three</a>
+            </li>
+            <li class="nav-ul-li">
+              <a href="#" class="nav-ul-li-a">Four</a>
+            </li>
+            <li class="nav-ul-li">
+              <a href="#" class="nav-ul-li-a">
+                <i class="fa-solid fa-cart-shopping" style="font-size: 14px;"></i> Cart
+              </a>
+            </li>
+          </ul>
+          <i class="fa-solid fa-bars" id="menu-btn"></i>
+        </div>
+        <form class="nav-bar-form">
+          <input type="text" placeholder="Search for Services ..." autocomplete="off"/>
+          <button><i class="fa-solid fa-magnifying-glass" id="search-btn-1"></i></button>
+          <i class="fa-solid fa-xmark" id="nav-bar-form-close"></i>
+        </form>
+      </div>
+    </nav>
+    <section>
+      <div class="content">
+        <div class="slider">
+          <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1" checked/>
+            <input type="radio" name="radio-btn" id="radio2"/>
+            <input type="radio" name="radio-btn" id="radio3"/>
+            <input type="radio" name="radio-btn" id="radio4"/>
+            <input type="radio" name="radio-btn" id="radio5"/>
+            <input type="radio" name="radio-btn" id="radio6"/>
+            <div class="slide-manual">
+              <label for="radio1" class="manual-btn" id="label-radio1"></label>
+              <label for="radio2" class="manual-btn" id="label-radio2"></label>
+              <label for="radio3" class="manual-btn" id="label-radio3"></label>
+              <label for="radio4" class="manual-btn" id="label-radio4"></label>
+              <label for="radio5" class="manual-btn" id="label-radio5"></label>
+              <label for="radio6" class="manual-btn" id="label-radio6"></label>
+            </div>
+            <div class="slide" id="slide-1"><img src="images/electroincs-serv.webp" alt="Image1"></div>
+            <div class="slide"><img src="images/mobile-serv.jpeg" alt="Image2"></div>
+            <div class="slide"><img src="images/vehicle-serv.jpg" alt="Image3"></div>
+            <div class="slide"><img src="images/cleaning-serv.webp" alt="Image4"></div>
+            <div class="slide"><img src="images/painting-serv.jpg" alt="Image5"></div>
+            <div class="slide"><img src="images/carpenter-serv.jpg" alt="Image6"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function manageSearchBtn(){
+        $("#search-btn-1").click(function(){
+          $(this).css("opacity", "0");
+          $(".nav-bar-form").css("display", "flex");  
+          setTimeout(()=>{
+            $(this).css("display", "none");
+            $(".nav-bar-form").css("opacity", "1");
+          }, 10);
+        });
+        $("#nav-bar-form-close").click(function(){
+          $(".nav-bar-form").css("opacity", "0");
+          $("#search-btn-1").css("display", "inline-block");  
+          setTimeout(()=>{
+            $(".nav-bar-form").css("display", "none");
+            $("#search-btn-1").css("opacity", "1");
+          }, 10);
+        });
+      }
+      /* =================================== */
+      
+      function loopSlide(){
+        document.querySelector("#radio"+slide_counter).checked = true;
+        slide_counter++;
+        if(slide_counter > 6) slide_counter = 1;
+      }
+
+      function autoImageSlider(){
+        slide_counter = 2;
+        let initLoop, autoLoop;
+        initLoop = setInterval(()=>reLoop(initLoop), 2000);
+        function reLoop(initLoop){
+          loopSlide();
+          clearInterval(initLoop);
+          autoLoop = setInterval(loopSlide, 3000);
+        }
+        $(".slide-manual").click(function(){
+          clearInterval(autoLoop);
+          slide_counter = 1;
+          initLoop = setInterval(()=>reLoop(initLoop), 15000);
+        });
+      } 
+      $(function(){
+        manageSearchBtn();
+        autoImageSlider();
+      });
+    </script>
+  </body>
+</html>
