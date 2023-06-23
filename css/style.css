@@ -242,27 +242,38 @@ nav .brand {
     width: var(--slide-aside-width);
     height: var(--slide-aside-height);
     border-radius: 10px;
-    background-image: url(../images/bg2.gif);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     padding: 3%;
 }
 
-.slide-desc .overlay {
-    background-color: #000000b6;
-    z-index: 1;
-}
 
-.slide-desc p {
+#slide-desc1 {
     z-index: 2;
     display: inline-block;
     font-size: 22px;
+    font-weight: 500;
     font-family: 'Poppins', sans-serif;
-    line-height: 44px;
+    line-height: 50px;
     letter-spacing: 1px;
+    position: relative;
+}
+
+#slide-desc1 span {
+    position: relative;
+    left: -100px;
+    top: -20px;
+    opacity: 0;
+    filter: blur(7px);
+}
+
+@keyframes show-item {
+    100% {
+        opacity: 1;
+        left: 0;
+        top: 0;
+        filter: blur(0);
+    }
 }

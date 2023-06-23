@@ -94,58 +94,24 @@
           </div>
         </section>
         <aside class="slide-desc">
-          <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, ea.</p>
-          <div class="overlay">
-          </div>
+          <p id="slide-desc1"> 
+            <span> Lorem </span> 
+            <span> ipsum, </span> 
+            <span> dolor </span> 
+            <span> sit </span> 
+            <span> amet </span> 
+            <span> consectetur </span> 
+            <span> adipisicing </span> 
+            <span> elit. </span> 
+            <span> Obcaecati, </span> 
+            <span> ea. </span> 
+          </p>
         </aside>
       </div>
     </section>
+    <script src="js/script.js"></script>
     <script>
-      function manageSearchBtn(){
-        $("#search-btn-1").click(function(){
-          $(this).css("opacity", "0");
-          $(".nav-bar-form").css("display", "flex");  
-          setTimeout(()=>{
-            $(this).css("display", "none");
-            $(".nav-bar-form").css("opacity", "1");
-          }, 10);
-        });
-        $("#nav-bar-form-close").click(function(){
-          $(".nav-bar-form").css("opacity", "0");
-          $("#search-btn-1").css("display", "inline-block");  
-          setTimeout(()=>{
-            $(".nav-bar-form").css("display", "none");
-            $("#search-btn-1").css("opacity", "1");
-          }, 10);
-        });
-      }
-      /* =================================== */
-      function loopSlide(){
-        document.querySelector("#radio"+slide_counter).checked = true;
-        slide_counter++;
-        if(slide_counter > 6) slide_counter = 1;
-      }
-      function autoImageSlider(){
-        slide_counter = 2;
-        let initLoop, autoLoop;
-        initLoop = setInterval(()=>reLoop(initLoop), 2000);
-        function reLoop(initLoop){
-          loopSlide();
-          clearInterval(initLoop);
-          autoLoop = setInterval(loopSlide, 3000);
-        }
-        $(".slide-manual").click(function(){
-          clearInterval(autoLoop);
-          slide_counter = 1;
-          initLoop = setInterval(()=>reLoop(initLoop), 15000);
-        });
-      } 
       
-      $(function(){
-        manageSearchBtn();
-        autoImageSlider();
-      });
-
     </script>
   </body>
 </html>
