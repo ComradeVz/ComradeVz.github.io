@@ -38,9 +38,10 @@ function autoImageSlider(){
   });
 } 
 
+
 $(function(){
   $("#slide-desc1 span").css("animation", "show-item 1s forwards ease");
-  $("#slide-desc1 span").css("animation-delay", (i, c) => (i * 0.1) + "s");
+  $("#slide-desc1 span").css("animation-delay", (i, c) => (i * 0.1 + 1) + "s");
   manageSearchBtn();
   autoImageSlider();
 });
