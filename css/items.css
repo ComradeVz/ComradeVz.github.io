@@ -1,0 +1,38 @@
+.service-providers {
+  margin-top: 80px;
+}
+
+.service-providers .content {
+  display: flex;
+  gap: 1%;
+}
+
+.sp.box {
+  width: 250px;
+  height: 400px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: black;
+  /* background: linear-gradient(160deg, #7c7c7c, #fff); */
+  /* background: linear-gradient(160deg, #04b0f9, #012464); */
+  /* border: 1px solid white; */
+}
+
+.sp.box * {
+  color: white;
+}
+
+.sp.box .image {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sp.box .image img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}

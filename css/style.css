@@ -78,7 +78,61 @@ nav .brand {
 .nav-ul {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+}
+
+.nav-ul-li {
+    padding: 5px 20px;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.2s;
+}
+
+.nav-ul-li:hover {
+    background-color: #01276d;
+}
+
+.nav-ul>li.categ:hover {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.drop-down {
+    z-index: 101;
+    width: 100%;
+    background-color: #01276d;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 28px;
+    left: 0;
+}
+
+.drop-down ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-top: 2px solid #02205a;
+}
+
+.drop-down ul li {
+    width: 100%;
+    transition: 0.2s;
+}
+
+.drop-down ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.drop-down ul li:hover {
+    background-color: #02205a;
 }
 
 .nav-bar-nav {
@@ -87,11 +141,13 @@ nav .brand {
 }
 
 #search-btn-1 {
+    padding: 5px 10px;
     cursor: pointer;
     transition: all 0.4s;
 }
 
 #menu-btn {
+    padding: 5px 10px;
     cursor: pointer;
 }
 
