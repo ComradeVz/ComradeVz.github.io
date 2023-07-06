@@ -1,21 +1,69 @@
+.filter {
+  margin-top: 80px;
+}
+
+.filter * {
+  color: #04b0f9;
+}
+
+.filter .content {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2%;
+}
+
+.filter .content h3 {
+  /* color: #fff; */
+  /* border: 1px solid #012464;
+  background-color: #012464; */
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-right: 10px;
+  letter-spacing: 1px;
+
+}
+
+.filter .content span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #515151;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.filter .content span:hover {
+  border-color: white;
+}
+
+/* ============================================= */
+
 .service-providers {
   margin-top: 80px;
 }
 
 .service-providers .content {
-  display: flex;
-  gap: 1%;
+  display: grid;
+  grid-template-columns: repeat(4, 22%);
+  gap: 3%;
 }
 
 .sp.box {
-  width: 250px;
-  height: 400px;
+  width: 100%;
+  height: 600px;
   cursor: pointer;
   border-radius: 10px;
-  background-color: black;
-  /* background: linear-gradient(160deg, #7c7c7c, #fff); */
-  /* background: linear-gradient(160deg, #04b0f9, #012464); */
-  /* border: 1px solid white; */
+  box-shadow: 0px 0px 3px #515151;
+  transition: 0.4s;
+}
+
+.sp.box:hover {
+  width: 102%;
+  height: 102%;
+  box-shadow: 0px 0px 3px #fff;
 }
 
 .sp.box * {
@@ -23,7 +71,7 @@
 }
 
 .sp.box .image {
-  height: 60%;
+  height: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,4 +83,40 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
+}
+
+.sp.box .desc {
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+}
+
+.sp.box .desc .words {
+  width: 80%;
+}
+
+.sp.box .desc .merits {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sp.box .desc .merits h4 {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.sp.box .desc .merits div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px
+}
+
+.sp.box .desc .merits span {
+  padding: 5px 10px;
+  border: 1px solid #515151;
+  border-radius: 5px;
 }
