@@ -1,0 +1,44 @@
+:root {
+    --slider-width: 60%;
+    --slider-height: 27vw;
+    --slide-aside-width: 35%;
+
+    --text-color-1: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    color: var(--text-color-1);
+}
+
+body {
+    background-color: #181818;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+/* ============================================ */

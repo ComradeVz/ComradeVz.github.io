@@ -1,0 +1,47 @@
+.partners {
+  margin-top: 40px;
+}
+
+.partners .content {
+  position: relative;
+  /* border: 1px solid white; */
+}
+
+.partners .content .icons {
+  width: 100%;
+  position: relative;
+}
+
+.partners .content .icons div {
+  width: 12%;
+  height: auto;
+}
+
+
+.partners .content .icons div img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.partners .content button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.partners button i {
+  z-index: 99;
+  font-size: 50px;
+  transition: 0.7s;
+}
+
+.partners button:hover i {
+  color: #04b0f9;
+}

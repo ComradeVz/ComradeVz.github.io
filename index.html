@@ -7,11 +7,11 @@
 
     <!-- ============= Font-Awesome ============= -->
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <!-- ============ /Font-Awesome/ ============ -->
 
@@ -20,18 +20,25 @@
     <!-- ============ /JQuery/ ============ -->
 
     <!-- ============= Custom ============= -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/nav-bar.css" />
+    <link rel="stylesheet" href="css/banner.css" />
+    <link rel="stylesheet" href="css/advantages.css" />
+    <link rel="stylesheet" href="css/partners.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/max-1500.css" />
+    <link rel="stylesheet" href="css/max-1280.css" />
+    <link rel="stylesheet" href="css/max-820.css" />
     <!-- ============ /Custom/ ============ -->
 
     <!-- ============= Next ============= -->
     <!-- ============ /Next/ ============ -->
-
   </head>
   <body>
     <nav class="nav-bar">
       <div class="content">
         <div class="brand">
-          <img src="images/logo.png" alt="logo">
+          <img src="images/logo.png" alt="logo" />
           <h1>ServOn</h1>
         </div>
         <div class="nav-bar-nav">
@@ -48,7 +55,7 @@
                   <li><a href="">Mechanics</a></li>
                   <li><a href="">Carpenting</a></li>
                   <li><a href="">Painting</a></li>
-                  <li><a href="">Cleaning</a></li>  
+                  <li><a href="">Cleaning</a></li>
                 </ul>
               </div>
             </li>
@@ -57,15 +64,25 @@
             </li>
             <li class="nav-ul-li">
               <a href="#" class="nav-ul-li-a">
-                <i class="fa-solid fa-cart-shopping" style="font-size: 14px;"></i> Cart
+                <i
+                  class="fa-solid fa-cart-shopping"
+                  style="font-size: 14px"
+                ></i>
+                Cart
               </a>
             </li>
           </ul>
           <i class="fa-solid fa-bars" id="menu-btn"></i>
         </div>
         <form class="nav-bar-form">
-          <input type="text" placeholder="Search for Services ..." autocomplete="off"/>
-          <button><i class="fa-solid fa-magnifying-glass" id="search-btn-1"></i></button>
+          <input
+            type="text"
+            placeholder="Search for Services ..."
+            autocomplete="off"
+          />
+          <button>
+            <i class="fa-solid fa-magnifying-glass" id="search-btn-1"></i>
+          </button>
           <i class="fa-solid fa-xmark" id="nav-bar-form-close"></i>
         </form>
       </div>
@@ -73,43 +90,55 @@
     <section class="banner">
       <div class="content">
         <section class="slider">
+          <input type="radio" name="radio-btn" class="radio-btn" id="radio1" checked />
+          <input type="radio" name="radio-btn" class="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" class="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" class="radio-btn" id="radio4" />
+          <input type="radio" name="radio-btn" class="radio-btn" id="radio5" />
+          <input type="radio" name="radio-btn" class="radio-btn" id="radio6" />
           <div class="slides">
-            <input type="radio" name="radio-btn" id="radio1" checked/>
-            <input type="radio" name="radio-btn" id="radio2"/>
-            <input type="radio" name="radio-btn" id="radio3"/>
-            <input type="radio" name="radio-btn" id="radio4"/>
-            <input type="radio" name="radio-btn" id="radio5"/>
-            <input type="radio" name="radio-btn" id="radio6"/>
-            <div class="slide-manual">
-              <label for="radio1" class="manual-btn" id="label-radio1"></label>
-              <label for="radio2" class="manual-btn" id="label-radio2"></label>
-              <label for="radio3" class="manual-btn" id="label-radio3"></label>
-              <label for="radio4" class="manual-btn" id="label-radio4"></label>
-              <label for="radio5" class="manual-btn" id="label-radio5"></label>
-              <label for="radio6" class="manual-btn" id="label-radio6"></label>
+            <div class="slide" id="slide-1">
+              <img src="images/electroincs-serv.webp" alt="Image1" />
             </div>
-            <div class="slide" id="slide-1"><img src="images/electroincs-serv.webp" alt="Image1"></div>
-            <div class="slide"><img src="images/mobile-serv.jpeg" alt="Image2"></div>
-            <div class="slide"><img src="images/vehicle-serv.jpg" alt="Image3"></div>
-            <div class="slide"><img src="images/cleaning-serv.webp" alt="Image4"></div>
-            <div class="slide"><img src="images/painting-serv.jpg" alt="Image5"></div>
-            <div class="slide"><img src="images/carpenter-serv.jpg" alt="Image6"></div>
+            <div class="slide">
+              <img src="images/mobile-serv.jpeg" alt="Image2" />
+            </div>
+            <div class="slide">
+              <img src="images/vehicle-serv.jpg" alt="Image3" />
+            </div>
+            <div class="slide">
+              <img src="images/cleaning-serv.webp" alt="Image4" />
+            </div>
+            <div class="slide">
+              <img src="images/painting-serv.jpg" alt="Image5" />
+            </div>
+            <div class="slide">
+              <img src="images/carpenter-serv.jpg" alt="Image6" />
+            </div>
+          </div>
+          <div class="slide-manual">
+            <label for="radio1" class="manual-btn" id="label-radio1"></label>
+            <label for="radio2" class="manual-btn" id="label-radio2"></label>
+            <label for="radio3" class="manual-btn" id="label-radio3"></label>
+            <label for="radio4" class="manual-btn" id="label-radio4"></label>
+            <label for="radio5" class="manual-btn" id="label-radio5"></label>
+            <label for="radio6" class="manual-btn" id="label-radio6"></label>
           </div>
         </section>
         <aside class="slide-desc">
-          <div id="slide-desc1"> 
+          <div id="slide-desc1">
             <p>
-              <span> Experience </span> 
-              <span> effective </span> 
-              <span> device </span> 
-              <span> solutions </span> 
-              <span> with </span> 
-              <span> our </span> 
-              <span> reliable </span> 
-              <span> and </span> 
-              <span> efficient, </span> <br/> 
-              <span> Electronic </span> 
-              <span> Service </span>  
+              <span> Experience </span>
+              <span> effective </span>
+              <span> device </span>
+              <span> solutions </span>
+              <span> with </span>
+              <span> our </span>
+              <span> reliable </span>
+              <span> and </span>
+              <span> efficient, </span> <br />
+              <span> Electronic </span>
+              <span> Service </span>
             </p>
           </div>
         </aside>
@@ -120,23 +149,23 @@
         <div class="title"><h3>Why ServOn ?</h3></div>
         <div class="icons">
           <div>
-            <img src="images/icons/customers.png" alt="">
+            <img src="images/icons/customers.png" alt="" />
             <span>1,000,000 Trusted Customers</span>
           </div>
           <div>
-            <img src="images/icons/employees.png" alt="">
+            <img src="images/icons/employees.png" alt="" />
             <span>1000+ Highly Skilled Employees</span>
           </div>
           <div>
-            <img src="images/icons/24-7.png" alt="">
+            <img src="images/icons/24-7.png" alt="" />
             <span>24/7 - Full Time Support</span>
           </div>
           <div>
-            <img src="images/icons/vehicle.png" alt="">
+            <img src="images/icons/vehicle.png" alt="" />
             <span>Quick Service</span>
           </div>
           <div>
-            <img src="images/icons/mobile.png" alt="">
+            <img src="images/icons/mobile.png" alt="" />
             <span>Easy & Fast Access</span>
           </div>
         </div>
@@ -144,21 +173,26 @@
     </section>
     <section class="partners info">
       <div class="content">
-        <div class="title"><h3>Our partners</h3></div>
+        <div class="title"><h3>Our Partners</h3></div>
         <div class="icons">
-          <div><img src="images/icons/google.png" alt=""></div>
-          <div><img src="images/icons/amazon.jpg" alt=""></div>
-          <div><img src="images/icons/flipkart.jpg" alt=""></div>
-          <div><img src="images/icons/alibaba.jpg" alt=""></div>
-          <div><img src="images/icons/honda.jpg" alt=""></div>
-          <button><i class="fa-solid fa-circle-arrow-right"></i> <span>view all</span></button>
+          <div><img src="images/icons/google.png" alt="" /></div>
+          <div><img src="images/icons/amazon.jpg" alt="" /></div>
+          <div><img src="images/icons/flipkart.jpg" alt="" /></div>
+          <div><img src="images/icons/alibaba.jpg" alt="" /></div>
+          <div><img src="images/icons/honda.jpg" alt="" /></div>
+          <button>
+            <i class="fa-solid fa-circle-arrow-right"></i> <span>view all</span>
+          </button>
         </div>
       </div>
     </section>
     <footer>
       <div class="content">
         <div class="d1">
-          <span>ServOn is here for you. Ultimate destination for every services you need</span>
+          <span
+            >ServOn is here for you. Ultimate destination for every services you
+            need</span
+          >
           <button>Become a Service Provider</button>
         </div>
         <div class="links">
@@ -183,8 +217,21 @@
     </footer>
     <script src="js/script.js"></script>
     <script>
-      $(function(){
-      })
+      $(function () {
+        $("#slide-desc1 span").css("animation", "show-item 1s forwards ease");
+        $("#slide-desc1 span").css(
+          "animation-delay",
+          (i, c) => i * 0.1 + 1 + "s"
+        );
+        $("#menu-btn").click(function () {
+            $(".nav-ul").toggleClass("show");
+            $(this).toggleClass("fa-bars")
+            $(this).toggleClass("fa-xmark")
+        });
+        categHover();
+        manageSearchBtn();
+        autoImageSlider();
+      });
     </script>
   </body>
 </html>

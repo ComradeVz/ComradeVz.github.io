@@ -1,0 +1,26 @@
+@media only screen and (max-width : 1500px) {
+
+
+  :root {
+    --slider-width: 100%;
+    --slider-height: 600px;
+    --slide-aside-width: 100%;
+  }
+
+  .banner .content {
+    flex-direction: column;
+  }
+
+  .slide-desc {
+    display: none;
+    height: 200px;
+  }
+
+  #slide-desc1 {
+    justify-content: center;
+  }
+
+  .advantages .icons div span {
+    font-size: 1.5vw;
+  }
+}
