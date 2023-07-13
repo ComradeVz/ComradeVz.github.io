@@ -24,3 +24,18 @@
     font-size: 1.5vw;
   }
 }
+
+@media only screen and (max-width:1140px) and (min-width: 820px) {
+  .nav-bar-form {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    z-index: 10001;
+  }
+
+  .banner {
+    margin-top: 60px;
+  }
+}

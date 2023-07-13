@@ -1,6 +1,8 @@
 nav {
+  height: 60px;
   width: 100%;
   border-bottom: 1px solid #04b0f9;
+  position: relative;
 }
 
 nav * {
@@ -8,6 +10,8 @@ nav * {
 }
 
 nav .content {
+  height: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,24 +33,31 @@ nav .brand {
 }
 
 .nav-ul {
+  height: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .nav-ul-li {
-  display: inline-block;
-  text-align: center;
-  padding: 5px 0;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 5px 0; */
   border-radius: 5px;
   position: relative;
   transition: 0.2s;
 }
 
-.nav-ul-li:hover {
+.nav-ul-li.categ:hover .categ-a {
   background-color: #01276d;
 }
 
-.nav-ul>li.categ:hover {
+.nav-ul-li-a:hover {
+  background-color: #01276d;
+}
+
+.nav-ul-li-a.categ-a:hover {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
@@ -70,7 +81,7 @@ nav .brand {
   align-items: center;
 
   position: absolute;
-  top: 28px;
+  top: 40px;
   left: 0;
 }
 
@@ -101,72 +112,13 @@ nav .brand {
   gap: 30px;
 }
 
-#search-btn-1 {
-  padding: 7px 5px;
-  cursor: pointer;
-  transition: all 0.4s;
-}
 
 #menu-btn {
-  padding: 7px 5px;
   display: none;
   cursor: pointer;
-  /* border: 1px solid white; */
+  line-height: 57px;
 }
 
-.nav-bar-form {
-  display: none;
-  position: absolute;
-  right: 0;
-  bottom: -48px;
-  border-radius: 5px;
-  opacity: 0;
-  transition: all 0.2s;
-}
-
-.nav-bar-form input,
-.nav-bar-form button {
-  background-color: inherit;
-  border: 1px solid #04b0f9;
-  height: 32px;
-  cursor: pointer;
-  transition: all 0.4s;
-  outline: 1px solid transparent;
-}
-
-.nav-bar-form input {
-  padding-left: 10px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-.nav-bar-form button {
-  width: 32px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-left: 1px solid transparent;
-}
-
-.nav-bar-form input:hover,
-.nav-bar-form input:focus {
-  outline: 1px solid #880794;
-}
-
-.nav-bar-form button:hover {
-  border-left: 1px solid #04b0f9;
-  outline: 1px solid #880794;
-}
-
-#nav-bar-form-close {
-  position: absolute;
-  font-size: 12px;
-  top: -8px;
-  right: -12px;
-  cursor: pointer;
-  transition: all 0.4s;
+#menu-btn:hover {
   color: #04b0f9;
-}
-
-#nav-bar-form-close:hover {
-  color: #880794;
 }

@@ -7,11 +7,11 @@ function manageSearchBtn() {
       $(".nav-bar-form").css("opacity", "1");
     }, 10);
   });
-  $("#nav-bar-form-close").click(function () {
-    $(".nav-bar-form").css("opacity", "0");
+  $("#form-close-btn i").click(function () {
     $("#search-btn-1").css("display", "inline-block");
+    $(".nav-bar-form").css("opacity", "0");
+    $(".nav-bar-form").css("display", "none");
     setTimeout(() => {
-      $(".nav-bar-form").css("display", "none");
       $("#search-btn-1").css("opacity", "1");
     }, 10);
   });

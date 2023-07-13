@@ -22,12 +22,12 @@
     <!-- ============= Custom ============= -->
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/nav-bar.css" />
+    <link rel="stylesheet" href="css/search-box.css" />
     <link rel="stylesheet" href="css/banner.css" />
     <link rel="stylesheet" href="css/advantages.css" />
     <link rel="stylesheet" href="css/partners.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/max-1500.css" />
-    <link rel="stylesheet" href="css/max-1280.css" />
     <link rel="stylesheet" href="css/max-820.css" />
     <!-- ============ /Custom/ ============ -->
 
@@ -42,13 +42,31 @@
           <h1>ServOn</h1>
         </div>
         <div class="nav-bar-nav">
+
+
+          <form class="nav-bar-form">
+
+            <input
+              type="text"
+              placeholder="Search for Services ..."
+              autocomplete="off"
+            />
+            <button id="form-search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button  id="form-close-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </form>
+
+
           <i class="fa-solid fa-magnifying-glass" id="search-btn-1"></i>
           <ul class="nav-ul">
             <li class="nav-ul-li">
               <a href="index.html" class="nav-ul-li-a">Home</a>
             </li>
             <li class="nav-ul-li categ">
-              <span class="nav-ul-li-a">Categories</span>
+              <span class="nav-ul-li-a categ-a">Categories</span>
               <div class="drop-down">
                 <ul>
                   <li><a href="items.html">Electronics</a></li>
@@ -74,17 +92,6 @@
           </ul>
           <i class="fa-solid fa-bars" id="menu-btn"></i>
         </div>
-        <form class="nav-bar-form">
-          <input
-            type="text"
-            placeholder="Search for Services ..."
-            autocomplete="off"
-          />
-          <button>
-            <i class="fa-solid fa-magnifying-glass" id="search-btn-1"></i>
-          </button>
-          <i class="fa-solid fa-xmark" id="nav-bar-form-close"></i>
-        </form>
       </div>
     </nav>
     <section class="banner">
